@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landscape Design</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Adelaide</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="#testimonials">Отзывы</a></li>
+                    <li><a href="#internships">Стажировки</a></li>
+                </ul>
+            </nav>
+            <div class="cta">
+                <a href="#contacts" class="button">Связаться с нами</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Ландшафтный дизайн от профессионалов</h1>
+            <p>Создаем уникальные ландшафты для вашего дома и бизнеса</p>
+            <div class="scroll-down">
+                <a href="#services">↓</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="services-intro">
+                <h2>Наши услуги</h2>
+                <p>Наши услуги по дизайну и строительству адаптированы к вашему местоположению, потребностям, стилю и бюджету.</p>
+            </div>
+            <div class="services-list">
+                <div class="service-item">
+                    <img src="{% static 'images/icon1.png' %}" alt="Icon 1">
+                    <h3>Укладка газонов</h3>
+                    <p>Мы профессионально занимаемся укладкой газонов любой сложности.</p>
+                </div>
+                <div class="service-item">
+                    <img src="{% static 'images/icon2.png' %}" alt="Icon 2">
+                    <h3>Ландшафтный дизайн</h3>
+                    <p>Создание уникальных и креативных ландшафтных решений для вашего участка.</p>
+                </div>
+                <div class="service-item">
+                    <img src="{% static 'images/icon7.png' %}" alt="Icon 3">
+                    <h3>Подрезка деревьев и кустарников</h3>
+                    <p>Качественная подрезка растений для поддержания их здоровья и красоты.</p>
+                </div>
+                <div class="service-item">
+                    <img src="{% static 'images/icon4.png' %}" alt="Icon 4">
+                    <h3>Установка систем полива</h3>
+                    <p>Профессиональная установка систем автоматического полива для вашего сада.</p>
+                </div>
+                <div class="service-item">
+                    <img src="{% static 'images/icon5.png' %}" alt="Icon 5">
+                    <h3>Дизайн и установка ограждений</h3>
+                    <p>Индивидуальный дизайн и монтаж ограждений различных видов и материалов.</p>
+                </div>
+                <div class="service-item">
+                    <img src="{% static 'images/icon6.png' %}" alt="Icon 6">
+                    <h3>Уход за растениями</h3>
+                    <p>Комплексный уход за растениями, включая подкормку, полив, и защиту от вредителей.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="clients">
+        <div class="container">
+            <h2>Наши клиенты</h2>
+            <div class="clients-logos">
+                <div class="client-item">
+                    <a href="#"><img src="{% static 'images/client1.jpg' %}" alt="Client 1"></a>
+                </div>
+                <div class="client-item">
+                    <a href="#"><img src="{% static 'images/client2.png' %}" alt="Client 2"></a>
+                </div>
+                <div class="client-item">
+                    <a href="#"><img src="{% static 'images/client3.png' %}" alt="Client 3"></a>
+                </div>
+                <div class="client-item">
+                    <a href="#"><img src="{% static 'images/client4.jpg' %}" alt="Client 4"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="slideshow">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="{% static 'images/image1.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="{% static 'images/image2.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="{% static 'images/image3.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="{% static 'images/image4.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="{% static 'images/image5.jpg' %}" style="width:100%">
+                    </div>
+                </div>
+            </div>
+            <h2>О нас</h2>
+            <p>{{ contact_info.description }}</p>
+            <p class="styled-text">
+                Наша компания – это коллектив профессионалов, создающих уникальные ландшафтные решения для вашего комфорта и вдохновения. За более чем 15 лет работы мы превратили множество участков в настоящие оазисы, сочетая великолепие природы с инновационными идеями дизайна.
+                Мы гордимся каждым завершенным проектом, будь то скромный сад у частного дома или грандиозный парк в центре города. Наша команда специализируется на создании ландшафтов, которые не только радуют глаз, но и приносят пользу окружающей среде.
+                Наше видение заключается не только в том, чтобы изменить ваш участок – мы стремимся создать место, где вы сможете почувствовать гармонию с природой и сами собой. Мы уверены, что красиво спроектированное пространство способно вдохновлять и приносить радость каждый день.
+                Наша философия воплощается в каждом проекте, который мы начинаем. Мы подходим к нему с любовью и вниманием к деталям, чтобы результат превзошел ваши ожидания. Наша цель – не просто создать ландшафт, а сделать его частью вашей жизни.
+            </p>
+        </div>
+    </section>
+
+    <section id="internships" class="internships">
+        <div class="container">
+            <h2>Стажировки для студентов</h2>
+            <div class="internship-description">
+                <ul>
+                    <li>Уникальный опыт работы в инновационной компании.</li>
+                    <li>Возможность участвовать в увлекательных проектах и заданиях.</li>
+                    <li>Наставничество от опытных профессионалов.</li>
+                    <li>Возможность развивать свои навыки и учиться новому каждый день.</li>
+                    <li>Шанс получить предложение о работе после завершения стажировки.</li>
+                </ul>
+            </div>
+            <div class="internship-form">
+                <h3>Отправить резюме</h3>
+                <form action="{% url 'internship_application' %}" method="post">
+                    {% csrf_token %}
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="email" name="email" placeholder="Ваш email" required>
+                    <input type="text" name="university" placeholder="Ваш университет" required>
+                    <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="testimonials-intro">
+                <h2>Отзывы</h2>
+                <p>Вот что говорят о нас наши клиенты:</p>
+            </div>
+            <div class="testimonials-list">
+                <div class="testimonial-item">
+                    <img src="{% static 'images/rev1.jpg' %}" alt="Icon 1">
+                    <h3>Иван Иванов</h3>
+                    <p>Отличный сервис и высокое качество работ!</p>
+                </div>
+                <div class="testimonial-item">
+                    <img src="{% static 'images/rev2.jpg' %}" alt="Icon 2">
+                    <h3>Мария Смирнова</h3>
+                    <p>Быстро и качественно выполнили заказ. Рекомендую!</p>
+                </div>
+                <div class="testimonial-item">
+                    <img src="{% static 'images/rev3.jpg' %}" alt="Icon 3">
+                    <h3>Алексей Кузнецов</h3>
+                    <p>Профессиональная команда, очень довольны результатом.</p>
+                </div>
+                <div class="testimonial-item">
+                    <img src="{% static 'images/rev4.jpg' %}" alt="Icon 4">
+                    <h3>Ольга Петрова</h3>
+                    <p>Отличная работа, превзошли все ожидания!</p>
+                </div>
+                <div class="testimonial-item">
+                    <img src="{% static 'images/rev5.jpg' %}" alt="Icon 5">
+                    <h3>Дмитрий Соколов</h3>
+                    <p>Спасибо за отличную работу, все сделано на высшем уровне!</p>
+                </div>
+                <div class="testimonial-item">
+                    <img src="{% static 'images/rev6.jpg' %}" alt="Icon 6">
+                    <h3>Елена Морозова</h3>
+                    <p>Работа выполнена качественно и в срок. Спасибо!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <div class="contact-form">
+            <h3>Связаться с нами</h3>
+            <form action="{% url 'contact_message' %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; {{ current_year }} Landscape Design. All rights reserved.</p>
+            <p>Follow us:</p>
+            <div class="social-links">
+                <span>Instagram</span> | <span>LinkedIn</span> | <span>Facebook</span> | <span>Twitter</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 2000);
+        }
+    </script>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

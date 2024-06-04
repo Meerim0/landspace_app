@@ -1,0 +1,528 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo h1 {
+    font-size: 24px;
+    color: #4B6F44;
+    margin: 0;
+
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header .cta .button {
+    background-color: #4B6F44;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+header .cta .button:hover {
+    background-color: #1c86ee;
+}
+
+.hero {
+    background: url('/static/images/image9.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero .scroll-down {
+    margin-top: 40px;
+    font-size: 24px;
+}
+
+.services {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #4B6F44;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.service-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 14px;
+    color: black;
+}
+
+.contact-form, .internship-form {
+    width: 50%;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-form h2, .internship-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #4B6F44;
+}
+
+.contact-form form button, .internship-form form button {
+    background-color: #4B6F44;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contact-form form input,
+.contact-form form textarea,
+.internship-form form input,
+.internship-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Цвет границы */
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #333; /* Цвет текста */
+    background-color: #ffffff; /* Белый фон */
+}
+
+.contact-form form textarea,
+.internship-form form textarea {
+    resize: vertical;
+}
+
+.clients {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff; /* Белый фон для секции "Наши клиенты" */
+}
+
+.clients .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clients h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.clients-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white; /* Белый фон только для логотипов */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 1000px; /* Максимальная ширина для лучшего визуального эффекта */
+}
+
+.client-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.clients-logos img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+footer {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background-color: #1c86ee;
+}
+
+.services {
+    background-color: #ffffff; /* Белый фон для секции "Наши услуги" */
+    padding: 60px 20px;
+}
+
+.services .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-intro h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.services-intro p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.services-intro .button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.services-intro .button:hover {
+    background-color: #555;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: calc(25% - 20px);
+    text-align: center;
+}
+
+.service-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.service-item .button {
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.service-item .button:hover {
+    background-color: #1c86ee;
+}
+
+/* Schedule a Call button */
+.schedule-call {
+    background-color: #4CAF50;
+}
+
+.schedule-call:hover {
+    background-color: #45a049;
+}
+
+.clients {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.clients .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clients h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.clients-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white; /* Белый фон только для логотипов */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 1000px; /* Максимальная ширина для лучшего визуального эффекта */
+}
+
+.client-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.clients-logos img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-form {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Белый фон формы "Связаться с нами" */
+}
+
+.contact-form h3 {
+    text-align: center;
+    font-size: 32px;
+    color: #4B6F44;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form form button {
+    background-color: #4B6F44;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form form button:hover {
+    background-color: #1c86ee;
+}
+
+.internship-description {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+
+.internship-description ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.internship-description ul li {
+    margin-bottom: 10px;
+}
+
+.internship-description ul li:before {
+    content: "•";
+    margin-right: 5px;
+    color: #4B6F44;
+}
+
+
+
+.testimonials {
+    background-color: #ffffff; /* Белый фон для секции "Отзывы" */
+    padding: 60px 20px;
+}
+
+.testimonials .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testimonials-intro h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.testimonials-intro p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.testimonials-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: calc(25% - 20px);
+    text-align: center;
+}
+
+.testimonial-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.testimonial-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.testimonial-item p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.container h2 {
+    text-align: center;
+}
+.container p.styled-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #333;
+    text-align: center; /* Текст по центру */
+    line-height: 1.6;
+    margin-top: 20px;
+    padding: 10px;
+    border-left: 2px solid #4B6F44; /* Левая граница параграфа */
+    background-color: #ffffff; /* Фон параграфа */
+}
+
+
